@@ -1,0 +1,33 @@
+# Global Settings
+max-history=5
+sort=-time
+layer=overlay
+
+# Visuals
+font=JetBrains Mono Nerd Font 9
+background-color=#000000
+text-color=#ffffff
+width=250
+height=100
+margin=15
+padding=10
+border-size=2
+border-color=#ffffff
+border-radius=0
+
+# Progress bar (for volume/brightness)
+progress-color=#ffffff
+
+# Specific Text Sizes
+[urgency=low]
+border-color=#333333
+
+[urgency=high]
+border-color=#ffffff
+default-timeout=0
+
+# Add this to your mako config to remove the "image" space entirely
+icons=0
+
+# This ensures the text is perfectly centered in the small box
+text-alignment=center

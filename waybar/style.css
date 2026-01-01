@@ -1,0 +1,43 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #000000;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #666666;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio {
+    padding: 0 10px;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#custom-notification {
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+#backlight {
+    color: #ffffff;
+    background: #000000;
+    padding: 0 10px;
+    border-bottom: 2px solid #ffffff; /* Matches your notification border */
+}
