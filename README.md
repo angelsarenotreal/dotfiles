@@ -20,7 +20,7 @@ sudo pacman -S git
 ### 2. Clone this repository
 
 ```bash
-git clone [https://github.com/angelsarenotreal/dotfiles.git](https://github.com/angelsarenotreal/dotfiles.git)
+git clone https://github.com/angelsarenotreal/dotfiles.git
 cd dotfiles
 ```
 
