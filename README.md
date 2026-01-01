@@ -9,6 +9,16 @@ A pitch-black and white minimalist Arch Linux environment.
 - **Notifications**: Mako (Black with White borders)
 
 ## Installation
-1. Clone the repo: `git clone https://github.com/angelsarenotreal/dotfiles.git`
-2. Run the deployment script: `./install.sh`
-*(Note: SDDM system files will prompt for sudo).*
+Once you have logged into your new Arch installation, run these commands:
+
+```bash
+# 1. Install Git
+sudo pacman -S git
+
+# 2. Clone this repository
+git clone [https://github.com/angelsarenotreal/dotfiles.git](https://github.com/angelsarenotreal/dotfiles.git)
+cd dotfiles
+
+# 3. Make the script executable and run it
+chmod +x install.sh
+./install.sh
