@@ -41,3 +41,18 @@ window#waybar {
     padding: 0 10px;
     border-bottom: 2px solid #ffffff; /* Matches your notification border */
 }
+
+#custom-updater {
+    color: #ffffff;            /* White icon */
+    background-color: #000000; /* Black background */
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 0px;
+    padding: 0 12px;           /* Slightly wider for the icon */
+    margin: 4px 4px;
+    font-size: 18px;           /* This makes the icon itself larger */
+}
+
+#custom-updater:hover {
+    background-color: #ffffff; 
+    color: #000000;            /* Invert colors on hover */
+}

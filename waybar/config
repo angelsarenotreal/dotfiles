@@ -1,11 +1,11 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 35,
     "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["backlight", "pulseaudio", "cpu", "memory", "network", "clock", "tray"],
+    "modules-right": ["custom/updater", "backlight", "pulseaudio", "cpu", "memory", "network", "clock", "tray"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -19,13 +19,19 @@
         "separate-outputs": true
     },
 
+    "custom/updater": {
+        "format": "󰇚",
+        "on-click": "kitty --title 'System Update' sh -c '~/scripts/update_system.sh'",
+        "tooltip": false
+    },
+
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": ["󰃠"],
-        "on-click": "brightnessctl g | xargs -I {} echo \"(( {} * 100 / 255 ))\" | bc > /tmp/wobpipe",
-        "on-scroll-up": "brightnessctl set 1%+ && brightnessctl g | xargs -I {} echo \"(( {} * 100 / 255 ))\" | bc > /tmp/wobpipe",
-        "on-scroll-down": "brightnessctl set 1%- && brightnessctl g | xargs -I {} echo \"(( {} * 100 / 255 ))\" | bc > /tmp/wobpipe"
+        "on-click": "brightnessctl -m | cut -d, -f4 | sed 's/%//' > /tmp/wobpipe",
+        "on-scroll-up": "brightnessctl set 1%+ && brightnessctl -m | cut -d, -f4 | sed 's/%//' > /tmp/wobpipe",
+        "on-scroll-down": "brightnessctl set 1%- && brightnessctl -m | cut -d, -f4 | sed 's/%//' > /tmp/wobpipe"
     },
 
     "clock": {
