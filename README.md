@@ -11,14 +11,21 @@ A pitch-black and white minimalist Arch Linux environment.
 ## Installation
 Once you have logged into your new Arch installation, run these commands:
 
-```bash
-# 1. Install Git
-sudo pacman -S git
+### 1. Install Git
 
-# 2. Clone this repository
+```bash
+sudo pacman -S git
+```
+
+### 2. Clone this repository
+
+```bash
 git clone [https://github.com/angelsarenotreal/dotfiles.git](https://github.com/angelsarenotreal/dotfiles.git)
 cd dotfiles
+```
 
-# 3. Make the script executable and run it
+### 3. Make the script executable and run it
+```bash
 chmod +x install.sh
 ./install.sh
+```
