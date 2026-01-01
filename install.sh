@@ -6,13 +6,13 @@ echo "Starting Monochromatic 'Void' Rice Deployment..."
 echo "Installing programs..."
 sudo pacman -S --needed hyprland hyprpaper hyprlock hypridle waybar wofi kitty mako sddm neovim git qt5-graphicaleffects qt5-quickcontrols2 qt5-svg
 
-# 2. Create necessary config directories
-mkdir -p ~/.config/hypr ~/.config/waybar ~/.config/wofi ~/.config/kitty ~/.config/mako ~/.config/nvim
+# 2. Create necessary config directories (Notice: waybar is removed from here)
+mkdir -p ~/.config/hypr ~/.config/wofi ~/.config/kitty ~/.config/mako ~/.config/nvim
 
 # 3. Symlink user configurations
 echo "Linking configuration files..."
 ln -sf ~/dotfiles/hypr/* ~/.config/hypr/
-ln -sf ~/dotfiles/waybar/* ~/.config/waybar/
+ln -sfn ~/dotfiles/waybar ~/.config/waybar      # Cleanest way to link a folder
 ln -sf ~/dotfiles/wofi/* ~/.config/wofi/
 ln -sf ~/dotfiles/kitty/* ~/.config/kitty/
 ln -sf ~/dotfiles/mako/* ~/.config/mako/
