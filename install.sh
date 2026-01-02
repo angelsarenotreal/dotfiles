@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting Monochromatic 'Void' Rice Deployment..."
+echo "Starting Actalepsy Deployment..."
 
 # 1. Install necessary packages
 echo "Installing programs..."
