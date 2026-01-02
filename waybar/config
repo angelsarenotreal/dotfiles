@@ -3,9 +3,9 @@
     "position": "top",
     "height": 35,
     "spacing": 4,
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "custom/spotify"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/updater", "backlight", "pulseaudio", "cpu", "memory", "network", "clock", "tray"],
+    "modules-right": ["custom/updater", "backlight", "pulseaudio", "network", "clock", "tray"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -23,6 +23,19 @@
         "format": "󰇚",
         "on-click": "kitty --title 'System Update' sh -c '~/scripts/update_system.sh'",
         "tooltip": false
+    },
+
+    "custom/spotify": {
+        "format": "{icon} {text}",
+        "return-type": "json",
+        "max-length": 35,
+        "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{title}} - {{artist}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'",
+        "exec-if": "pgrep spotify",
+        "interval": 1,
+        "format-icons": {
+            "Playing": "",
+            "Paused": ""
+        }
     },
 
     "backlight": {
@@ -45,7 +58,7 @@
     },
 
     "memory": {
-        "format": "RAM: {}%"
+        "format": "RAM: {percentage}%"
     },
 
     "network": {

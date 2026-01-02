@@ -56,3 +56,14 @@ window#waybar {
     background-color: #ffffff; 
     color: #000000;            /* Invert colors on hover */
 }
+
+#custom-spotify {
+    color: #FFFFFF;
+    font-family: "JetBrainsMono Nerd Font";
+    padding: 0 10px;
+}
+
+/* Optional: Different color for the icon when paused */
+#custom-spotify.paused {
+    color: #535353; /* Using your border-inactive grey from Spotify theme */
+}
