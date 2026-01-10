@@ -1,4 +1,4 @@
-# Actalepsy
+# Arch Linux [hyprland]
 A pitch-black and white minimalist Arch Linux environment.
 
 ## Features
